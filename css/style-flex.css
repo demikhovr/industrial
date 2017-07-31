@@ -1,0 +1,612 @@
+@font-face {
+  font-weight: 300;
+  font-family: "HK Grotesk";
+  font-style: normal;
+
+  src: url("../fonts/hkgrotesk-light-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: "LeagueSpartan";
+  font-style: normal;
+
+  src: url("../fonts/leaguespartan-bold-webfont.woff") format("woff");
+}
+
+body {
+  min-width: 745px;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  font-weight: 300;
+  font-family: "HK Grotesk", Arial, sans-serif;
+
+  background-color: #212c43;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  border: 0;
+
+  clip: rect(0, 0, 0, 0);
+}
+
+.container {
+  display: flex;
+  flex-flow: column;
+}
+
+/*STYLES FOR HEADER*/
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 63px 0 53px;
+}
+
+.header__logo {
+  display: block;
+
+  outline: none;
+
+  transition: all 0.2s linear;
+}
+
+.header__logo:hover,
+.header__logo:focus {
+  opacity: 0.7;
+}
+
+.header__logo:active {
+  opacity: 0.3;
+}
+
+.header__logo img {
+  width: 294px;
+  height: 72px;
+}
+
+.header__search-form {
+  position: relative;
+}
+
+.header__search {
+  position: relative;
+}
+
+.header__search input {
+  width: 176px;
+  margin-top: 16px;
+  padding-bottom: 5px;
+  padding-left: 33px;
+
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 24px;
+  font-family: "HK Grotesk", Arial, sans-serif;
+  color: #93a3ab;
+
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid #93a3ab;
+  outline: none;
+
+  transition: all 0.2s linear;
+}
+
+.header__search input:hover,
+.header__search input:focus {
+  background-color: transparent;
+  border-bottom-color: #ffffff;
+}
+
+.header__search-btn {
+  position: absolute;
+  top: 25px;
+  left: 0;
+
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+
+  background-color: transparent;
+  background-image: url("../img/search.png");
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+/*STYLES FOR MAIN-CONTENT*/
+
+.main-content {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100%;
+  margin: auto;
+  padding: 0;
+}
+
+.catalog {
+  display: flex;
+  flex-basis: 100%;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 115px;
+}
+
+.catalog__item {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 0 28px;
+
+  background-color: grey;
+
+  transition: all 0.2s linear;
+}
+
+.catalog__item:hover {
+  box-shadow: 3px 3px 25px 0 rgba(0, 0, 0, 1);
+}
+
+.catalog__item:hover .catalog__item-title,
+.catalog__item:hover .catalog__item-info,
+.catalog__item:hover .catalog__item-btn {
+  text-shadow: 2px 2px 5px black;
+}
+
+.catalog__item-title,
+.catalog__item-info {
+  margin: 0;
+  padding: 0;
+
+  transition: all 0.2s linear;
+}
+
+.catalog__item-title {
+  font-weight: 700;
+  font-family: "LeagueSpartan", Arial, sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  transition: all 0.2s linear;
+}
+
+.catalog__item-info {
+  font-weight: 300;
+  font-family: "HK Grotesk", Arial, sans-serif;
+  color: #ffffff;
+  letter-spacing: 0.6px;
+}
+
+.catalog__item-btn {
+  display: inline-block ;
+
+  font-weight: 700;
+  font-size: 18px;
+  font-family: "LeagueSpartan", Arial, sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+
+  background-color: transparent;
+  border: 3px solid #f0caa1;
+  outline: none;
+
+  transition: all 0.2s linear;
+}
+
+.catalog__item-btn:hover,
+.catalog__item-btn:focus {
+  background-color: #f0caa1;
+}
+
+.catalog__item-btn:active {
+  opacity: 0.5;
+}
+
+.catalog__item--gina {
+  flex: 1 1 100%;
+  box-sizing: border-box;
+  width: 100%;
+  height: 690px;
+  margin-bottom: 40px;
+  padding: 115px 58px 112px 58px;
+
+  background-image: url("../img/kickstarter.png"), url("../img/gina.jpg");
+  background-repeat: no-repeat;
+  background-position: right 37px top 37px, 50% 50%;
+}
+
+.catalog__item--gina .catalog__item-title {
+  width: 365px;
+  margin: 0;
+  margin-bottom: 30px;
+
+  font-size: 80px;
+  line-height: 80px;
+}
+
+.catalog__item--gina .catalog__item-info {
+  width: 365px;
+  margin-bottom: 135px;
+  margin-left: 3px;
+
+  font-size: 32px;
+  line-height: 38px;
+}
+
+.catalog__item--gina .catalog__item-btn {
+  margin-right: auto;
+  margin-left: 2px;
+  padding: 12px 22px 13px 24px;
+
+  font-weight: 300;
+  font-size: 24px;
+  font-family: "HK Grotesk", "Arial", sans-serif;
+  text-transform: capitalize;
+}
+
+.catalog__item--beoplay {
+  align-items: flex-end;
+  box-sizing: border-box;
+  width: 560px;
+  width: 48.27%;
+  height: 520px;
+  margin-bottom: 40px;
+  padding-top: 61px;
+
+  text-align: right;
+
+  background-color: #60baa5;
+  background-image: url("../img/beoplay.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.catalog__item--beoplay .catalog__item-title {
+  margin-bottom: 10px;
+
+  font-size: 48px;
+}
+
+.catalog__item--beoplay .catalog__item-info {
+  margin: 0;
+  padding: 0;
+
+  font-size: 24px;
+  line-height: 28px;
+  text-align: right;
+  letter-spacing: 0.6px;
+}
+
+.catalog__item--beoplay .catalog__item-btn {
+  margin-top: auto;
+  margin-bottom: 223px;
+  padding: 12px 36px 8px 37px;
+
+  letter-spacing: 2px;
+}
+
+.catalog__item--leica {
+  align-items: flex-start;
+  box-sizing: border-box;
+  width: 560px;
+  width: 48.27%;
+  height: 520px;
+  margin-bottom: 40px;
+  padding-top: 61px;
+
+  text-align: left;
+
+  background-color: #757dc9;
+  background-image: url("../img/leica.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.catalog__item--leica .catalog__item-title {
+  margin-bottom: 10px;
+
+  font-size: 48px;
+}
+
+.catalog__item--leica .catalog__item-info {
+  margin: 0;
+  padding: 0;
+
+  font-size: 24px;
+  line-height: 28px;
+  text-align: right;
+  letter-spacing: 0.6px;
+}
+
+.catalog__item--leica .catalog__item-btn {
+  margin-top: auto;
+  margin-bottom: 223px;
+  padding: 12px 36px 8px 37px;
+
+  letter-spacing: 2px;
+}
+
+.catalog__item--molekule {
+  align-items: center;
+  box-sizing: border-box;
+  width: 360px;
+  height: 440px;
+  margin-bottom: 40px;
+
+  background-color: #eb7c61;
+  background-image: url("../img/molekule.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.catalog__item--molekule .catalog__item-info {
+  margin-top: 67px;
+  margin-bottom: 15px;
+
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 16px;
+  font-family: "HK Grotesk", Arial, sans-serif;
+  letter-spacing: 0.3px;
+}
+
+.catalog__item--molekule .catalog__item-title {
+  margin-bottom: 21px;
+
+  font-size: 36px;
+  line-height: 42px;
+}
+
+.catalog__item--signature {
+  align-items: center;
+  box-sizing: border-box;
+  width: 360px;
+  height: 440px;
+  margin-bottom: 40px;
+
+  background-color: #537683;
+  background-image: url("../img/p9.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.catalog__item--signature .catalog__item-info {
+  margin-top: 261px;
+  margin-bottom: 15px;
+
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 16px;
+  font-family: "HK Grotesk", Arial, sans-serif;
+  letter-spacing: 0.3px;
+}
+
+.catalog__item--signature .catalog__item-title {
+  margin-bottom: 21px;
+
+  font-size: 36px;
+  line-height: 42px;
+}
+
+.catalog__item--dr {
+  align-items: center;
+  box-sizing: border-box;
+  width: 360px;
+  height: 440px;
+  margin-bottom: 40px;
+
+  background-color: #81cada;
+  background-image: url("../img/dr-ii.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.catalog__item--dr .catalog__item-info {
+  margin-top: 67px;
+  margin-bottom: 15px;
+
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 16px;
+  font-family: "HK Grotesk", Arial, sans-serif;
+  letter-spacing: 0.3px;
+}
+
+.catalog__item--dr .catalog__item-title {
+  margin-bottom: 21px;
+
+  font-size: 36px;
+  line-height: 42px;
+}
+
+.catalog__item-btn--details {
+  margin: 0 auto;
+  padding: 13px 12px 7px 13px;
+
+  letter-spacing: 2px;
+}
+
+.subscribe {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-bottom: 100px;
+
+  font-weight: 300;
+  font-size: 16px;
+  font-size: 18px;
+  font-family: "HK Grotesk", Arial, sans-serif;
+  text-align: center;
+  color: #93a3ab;
+}
+
+.subscribe__title {
+  flex-grow: 1 1 100%;
+  margin: 0;
+  margin-bottom: 19px;
+
+  font-size: 36px;
+  line-height: 36px;
+  letter-spacing: 0.6px;
+}
+
+.subscribe__info {
+  flex: 1 1 100%;
+  margin: 0;
+  margin-bottom: 50px;
+
+  line-height: 21px;
+  letter-spacing: 0.2px;
+}
+
+.subscribe form {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.subscribe input[type="e-mail"] {
+  box-sizing: border-box;
+  width: 360px;
+  height: 60px;
+  margin-bottom: 21px;
+  padding: 15px 20px 18px 20px;
+
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 24px;
+  font-family: "HK Grotesk", Arial, sans-serif;
+  text-align: center;
+  color: #ffffff;
+
+  background-color: transparent;
+  border: 3px solid #63767f;
+  outline: none;
+
+  transition: all 0.2s linear;
+}
+
+.subscribe input[type="e-mail"]:hover {
+  border-color: #81cada;
+}
+
+.subscribe input[type="e-mail"]:focus {
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+.subscribe button[type="submit"] {
+  box-sizing: border-box;
+  height: 60px;
+  padding: 10px 0 10px 10px;
+
+  font-size: 18px;
+  line-height: 18px;
+  font-family: "LeagueSpartan", Arial, sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  background-color: transparent;
+  border: 3px solid #81cada;
+  outline: none;
+  cursor: pointer;
+
+  transition: all 0.2s linear;
+}
+
+.subscribe button[type="submit"]:hover {
+  background-color: #81cada;
+}
+
+.subscribe button[type="submit"]:active {
+  opacity: 0.5;
+}
+
+/*STYLES FOR FOOTER*/
+
+.footer {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.footer__nav-list {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.footer__nav-item {
+  position: relative;
+}
+
+.footer__nav-item:not(:first-of-type)::before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: -3px;
+
+  width: 5px;
+  height: 5px;
+
+  background-color: #93a3ab;
+  border-radius: 50%;
+}
+
+.footer__nav-link {
+  margin: 0 20px;
+
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 24px;
+  font-family: "HK Grotesk", Arial, sans-serif;
+  color: #93a3ab;
+  text-decoration: none;
+
+  transition: all 0.2s linear;
+}
+
+.footer__nav-link:hover {
+  color: #81cada;
+}
+
+.footer__nav-link:active {
+  position: relative;
+
+  color: #ffffff;
+
+  opacity: 0.1;
+}
+
+.footer__copyright {
+  font-size: 18px;
+  line-height: 18px;
+  color: #93a3ab;
+  letter-spacing: 0.2px;
+}
