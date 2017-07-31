@@ -1,0 +1,482 @@
+@font-face {
+  font-family: "HK Grotesk Light";
+
+  src: url("../fonts/hk-grotesk/HKGrotesk-Light.otf");
+}
+
+@font-face {
+  font-family: "LeagueSpartan";
+
+  src: url("../fonts/league-spartan/LeagueSpartan-Bold.otf");
+}
+
+body {
+  margin: 0;
+  padding: 0 15px;
+
+  font-family: "HK Grotesk Light", "Arial", sans-serif;
+
+  background-color: #212c43;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  border: 0;
+
+  clip: rect(0, 0, 0, 0);
+}
+
+.container {
+  display: flex;
+  flex-flow: column;
+  min-width: 430px;
+  max-width: 1160px;
+  min-height: 100%;
+  margin: 0 auto 0;
+}
+
+.main-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 63px 0 53px;
+}
+
+.main-logo {
+  display: block;
+}
+
+.main-logo img {
+  width: 294px;
+  height: 72px;
+}
+
+.main-logo img:hover {
+  opacity: 0.7;
+}
+
+.main-logo img:active {
+  opacity: 0.3;
+}
+
+.search {
+  position: relative;
+}
+
+.search input {
+  width: 176px;
+  margin-top: 16px;
+  padding-bottom: 5px;
+  padding-left: 33px;
+
+  font-size: 24px;
+  line-height: 24px;
+  font-family: "HK Grotesk Light", "Arial", sans-serif;
+  color: #93a3ab;
+
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid #93a3ab;
+  outline: none;
+}
+
+.search input:hover {
+  background-color: #ffffff;
+}
+
+.search::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 1px;
+
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+
+  background: url("../img/search.png") no-repeat;
+  background-color: transparent;
+}
+
+main {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100%;
+  margin: auto;
+  padding: 0;
+}
+
+.catalog {
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 154px;
+
+  font-size: 0;
+}
+
+.catalog-item {
+  display: inline-block;
+  padding: 0 28px;
+
+  vertical-align: top;
+
+  background-color: grey;
+}
+
+.catalog-item h3,
+.catalog-item p {
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-item .catalog-item-title {
+  font-family: "LeagueSpartan", "Arial", sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.catalog-item .catalog-item-info {
+  font-family: "HK Grotesk Light", "Arial", sans-serif;
+  color: #ffffff;
+  letter-spacing: 0.6px;
+}
+
+.btn-buy {
+  display: inline-block ;
+
+  font-size: 18px;
+  font-family: "LeagueSpartan", "Arial", sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+
+  background-color: transparent;
+  border: 3px solid #f0caa1;
+}
+
+.btn-buy:hover {
+  background-color: #f0caa1;
+}
+
+.btn-buy:active {
+  opacity: 0.5;
+}
+
+.gina {
+  box-sizing: border-box;
+  width: 1160px;
+  height: 690px;
+  margin-bottom: 40px;
+  padding: 115px 58px 112px 58px;
+
+  background: url("../img/gina.jpg") no-repeat;
+}
+
+.gina .catalog-item-title {
+  width: 365px;
+  margin: 0;
+  margin-bottom: 30px;
+
+  font-size: 80px;
+  line-height: 80px;
+}
+
+.gina .catalog-item-info {
+  width: 365px;
+  margin-bottom: 135px;
+  margin-left: 3px;
+
+  font-size: 32px;
+  line-height: 38px;
+}
+
+.now {
+  margin-right: auto;
+  margin-left: 2px;
+  padding: 12px 22px 13px 24px;
+
+  font-size: 24px;
+  font-family: "HK Grotesk Light", "Arial", sans-serif;
+  text-transform: capitalize;
+}
+
+.beoplay,
+.leica {
+  box-sizing: border-box;
+  width: 560px;
+  height: 520px;
+  margin-bottom: 40px;
+  padding-top: 61px;
+}
+
+.beoplay {
+  margin-right: 40px;
+
+  text-align: right;
+
+  background: url("../img/beoplay.png") no-repeat;
+  background-color: #60baa5;
+}
+
+.leica {
+  text-align: left;
+
+  background: url("../img/leica.png") no-repeat;
+  background-color: #757dc9;
+}
+
+.beoplay .catalog-item-title,
+.leica .catalog-item-title {
+  margin-bottom: 10px;
+
+  font-size: 48px;
+}
+
+.beoplay .catalog-item-info,
+.leica .catalog-item-info {
+  width: 455px;
+  margin: 0;
+  margin-bottom: 60px;
+  padding: 0;
+
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.6px;
+}
+
+.beoplay .catalog-item-info {
+  margin-left: auto;
+}
+
+.beoplay .btn-buy,
+.leica .btn-buy {
+  padding: 12px 36px 8px 37px;
+
+  letter-spacing: 2px;
+}
+
+.molekule,
+.signature,
+.dr {
+  box-sizing: border-box;
+  width: 360px;
+  height: 440px;
+  padding-top: 67px;
+
+  text-align: center;
+}
+
+.molekule {
+  background: url("../img/molekule.png") no-repeat;
+  background-color: #eb7c61;
+}
+
+.signature {
+  margin-left: 40px;
+
+  background: url("../img/p9.png") no-repeat;
+  background-color: #537683;
+}
+
+.dr {
+  margin-left: 40px;
+
+  background: url("../img/dr-ii.png") no-repeat;
+  background-color: #81cada;
+}
+
+.molekule .catalog-item-info,
+.signature .catalog-item-info,
+.dr .catalog-item-info {
+  margin-bottom: 15px;
+
+  font-size: 16px;
+  line-height: 16px;
+  font-family: "HK Grotesk Light", "Arial", sans-serif;
+  letter-spacing: 0.3px;
+}
+
+.signature .catalog-item-info {
+  margin-top: 194px;
+}
+
+.molekule .catalog-item-title,
+.signature .catalog-item-title,
+.dr .catalog-item-title {
+  margin-bottom: 23px;
+
+  font-size: 36px;
+  line-height: 42px;
+}
+
+.details {
+  margin-left: 5px;
+  padding: 13px 12px 7px 13px;
+
+  letter-spacing: 2px;
+}
+
+.subscribe {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-bottom: 100px;
+
+  font-size: 16px;
+  font-size: 18px;
+  font-family: "HK Grotesk Light","Arial", sans-serif;
+  text-align: center;
+  color: #93a3ab;
+}
+
+.subscribe p {
+  margin: 0;
+  padding: 0;
+}
+
+.subscribe .subscribe-title {
+  flex-grow: 1 1 100%;
+  margin-bottom: 19px;
+
+  font-size: 36px;
+  line-height: 36px;
+  letter-spacing: 0.6px;
+}
+
+.subscribe .subscribe-info {
+  flex: 1 1 100%;
+  margin-bottom: 50px;
+
+  line-height: 21px;
+  letter-spacing: 0.2px;
+}
+
+.subscribe form {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.subscribe input[type="e-mail"] {
+  box-sizing: border-box;
+  width: 360px;
+  margin-bottom: 21px;
+  padding: 14px 20px 10px 20px;
+
+  font-size: 24px;
+  line-height: 24px;
+  font-family: "HK Grotesk Light", "Arial", sans-serif;
+  text-align: center;
+  color: #ffffff;
+
+  background-color: transparent;
+  border: 3px solid #63767f;
+  outline: none;
+}
+
+.subscribe input[type="e-mail"]:hover {
+  border-color: #81cada;
+}
+
+.subscribe input[type="e-mail"]:focus {
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+.subscribe button[type="submit"] {
+  padding: 22px 0 15px 10px;
+
+  font-size: 18px;
+  line-height: 18px;
+  font-family: "LeagueSpartan", "Arial", sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  background-color: transparent;
+  border: 3px solid #81cada;
+  outline: none;
+  cursor: pointer;
+}
+
+.subscribe button[type="submit"]:hover {
+  background-color: #81cada;
+}
+
+.subscribe button[type="submit"]:active {
+  opacity: 0.5;
+}
+
+.main-footer {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.main-footer .footer-nav-list {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.nav-list-item {
+  position: relative;
+}
+
+.list-item-link {
+  margin: 0 20px;
+
+  font-size: 24px;
+  line-height: 24px;
+  font-family: "HK Grotesk Light", "Arial", sans-serif;
+  color: #93a3ab;
+  text-decoration: none;
+}
+
+.list-item-link:hover {
+  color: #81cada;
+}
+
+.list-item-link:active {
+  color: #ffffff;
+
+  opacity: 0.1;
+}
+
+.nav-list-item:not(:first-of-type)::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: -3px;
+
+  width: 5px;
+  height: 5px;
+
+  background-color: #93a3ab;
+  border-radius: 50%;
+}
+
+
+.footer-copyright {
+  font-size: 18px;
+  line-height: 18px;
+  color: #93a3ab;
+  letter-spacing: 0.2px;
+}
